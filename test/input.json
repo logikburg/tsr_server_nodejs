@@ -1,0 +1,102 @@
+{
+  "_id": "123456",
+  "name": "Launch Web Application (Windows)",
+  "requests": [
+    {
+      "_id": "111111",
+      "name": "New Windows Server",
+      "values": [
+        {
+          "location": "DC1",
+          "type": "",
+          "environment": "Production",
+          "OS": "win 2016",
+          "CPU": "i7",
+          "memory": 8,
+          "disk": 1000,
+          "software": [
+            "scom"
+          ],
+          "justification": "new project",
+          "backup": 1000,
+          "hostname": [
+            "wcdcwin10s"
+          ],
+          "ip": []
+        }
+      ],
+      "stage": [
+        {
+          "name": "submit",
+          "date": "2018-07-15 14:22"
+        }
+      ]
+    },
+    {
+      "_id": "222222",
+      "name": "MS SQL Server",
+      "values": [
+        {
+          "location": "DC1",
+          "type": "",
+          "environment": "Production",
+          "OS": "win 2016",
+          "CPU": "i7",
+          "memory": 8,
+          "disk": 1000,
+          "software": [
+            "scom"
+          ],
+          "justification": "new project",
+          "backup": 1000,
+          "hostname": [
+            "wcdcwin10s"
+          ],
+          "instance": [
+            "abc"
+          ],
+          "ip": []
+        }
+      ],
+      "stage": [
+        {
+          "name": "submit",
+          "date": "2018-07-15 14:22"
+        }
+      ]
+    },
+    {
+      "_id": "333333",
+      "name": "Data Backup Service",
+      "values": [
+        {
+          "location": "DC1",
+          "type": "",
+          "environment": "Production",
+          "OS": "win 2016",
+          "CPU": "i7",
+          "memory": 8,
+          "disk": 1000,
+          "software": [
+            "scom"
+          ],
+          "justification": "new project",
+          "backup": 1000,
+          "hostname": [
+            "wcdcwin10s"
+          ],
+          "instance": [
+            "abc"
+          ],
+          "ip": []
+        }
+      ],
+      "stage": [
+        {
+          "name": "submit",
+          "date": "2018-07-15 14:22"
+        }
+      ]
+    }
+  ]
+}

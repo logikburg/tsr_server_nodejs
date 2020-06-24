@@ -1,0 +1,866 @@
+{
+  "_id": "123456",
+  "name": "Launch Web Application (Windows)",
+  "requests": [
+    {
+      "_id": "111111",
+      "name": "New Windows Server",
+      "fields": {
+        "location": {
+          "is_reference": true,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "type": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "environment": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "os": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "application": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "cpu": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "memory": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "disk": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "software": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "justification": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "data_backup": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "hostname": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        "other_info": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        "requester_manager_approval": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester Manager",
+          "modifier": "Requester Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        "sm_comment": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester Manager",
+          "modifier": "Requester Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        "support_manager_approval": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "T3 Manager",
+          "modifier": "T3 Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        "support_manager_comment": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "T3 Manager",
+          "modifier": "T3 Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        "support_handling": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "T3 Support",
+          "modifier": "T3 Support",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        "support_comment": {
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "T3 Support",
+          "modifier": "T3 Support",
+          "subscribers": [],
+          "is_fulfilled": false
+        }
+      },
+      "stages": [
+        {
+          "id": 0,
+          "name": "new",
+          "fulfill_criteria": [],
+          "is_fulfilled": true,
+          "updated_by": "system",
+          "updated_datetime": "2018/07/13 11:30"
+        },
+        {
+          "id": 1,
+          "name": "submitted",
+          "fulfill_criteria": [
+            "location",
+            "type",
+            "environment",
+            "os",
+            "application",
+            "cpu",
+            "memory",
+            "disk",
+            "software",
+            "jusification",
+            "data_backup",
+            "hostname"
+          ],
+          "is_fulfilled": true,
+          "updated_by": "Requester",
+          "updated_datetime": "2018/07/13 12:30"
+        },
+        {
+          "id": 2,
+          "name": "requester_manager_approved",
+          "fulfill_criteria": [
+            "requester_manager_approval"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "Request Manager",
+          "updated_datetime": ""
+        },
+        {
+          "id": 3,
+          "name": "support_manager_approved",
+          "fulfill_criteria": [
+            "support_manager_approval"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "T3 Manager",
+          "updated_datetime": ""
+        },
+        {
+          "id": 4,
+          "name": "completed",
+          "fulfill_criteria": [
+            "support_handling"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "T3 Support Group",
+          "updated_datetime": "",
+          "reference_to": "333333"
+        }
+      ]
+    },
+    {
+      "_id": "222222",
+      "name": "MS SQL Server",
+      "fields": [
+        {
+          "name": "location",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "type",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "environment",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "database_type",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "disk",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "software",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "justification",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "data_backup",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "hostname",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "instance_name",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "other_info",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "database_version",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "requester_manager_approval",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester Manager",
+          "modifier": "Requester Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "sm_comment",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester Manager",
+          "modifier": "Requester Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "support_manager_approval",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "SC3 Manager",
+          "modifier": "SC3 Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "support_manager_comment",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "SC3 Manager",
+          "modifier": "SC3 Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "support_handling",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "SC3 Support",
+          "modifier": "SC3 Support",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "support_comment",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "SC3 Support",
+          "modifier": "SC3 Support",
+          "subscribers": [],
+          "is_fulfilled": false
+        }
+      ],
+      "stages": [
+        {
+          "id": 0,
+          "name": "new",
+          "fulfill_criteria": [],
+          "is_fulfilled": true,
+          "updated_by": "system",
+          "updated_datetime": "2018/07/13 11:30"
+        },
+        {
+          "id": 1,
+          "name": "submitted",
+          "fulfill_criteria": [
+            "location",
+            "type",
+            "environment",
+            "database_type",
+            "disk",
+            "software",
+            "jusification",
+            "data_backup",
+            "hostname",
+            "instance_name"
+          ],
+          "is_fulfilled": true,
+          "updated_by": "Requester",
+          "updated_datetime": "2018/07/13 12:30"
+        },
+        {
+          "id": 2,
+          "name": "requester_manager_approved",
+          "fulfill_criteria": [
+            "requester_manager_approval"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "Request Manager",
+          "updated_datetime": ""
+        },
+        {
+          "id": 3,
+          "name": "support_manager_approved",
+          "fulfill_criteria": [
+            "support_manager_approval"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "SC3 Manager",
+          "updated_datetime": ""
+        },
+        {
+          "id": 4,
+          "name": "completed",
+          "fulfill_criteria": [
+            "support_handling"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "SC3 Support Group",
+          "updated_datetime": ""
+        }
+      ]
+    },
+    {
+      "_id": "333333",
+      "name": "Data Backup Service",
+      "fields": [
+        {
+          "name": "Windows Server Available",
+          "is_reference": true,
+          "value": {},
+          "reference": {
+            "tsr_id": "request#324325",
+            "ref_field": "completed"
+          },
+          "owner": "T3 Support",
+          "modifier": "T3 Support",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "SQL Server Available",
+          "is_reference": true,
+          "value": {},
+          "reference": {
+            "tsr_id": "request#222222",
+            "ref_field": "completed"
+          },
+          "owner": "SC3 Support",
+          "modifier": "SC3 Support",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "Backup_Software",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "hostname",
+          "is_reference": true,
+          "value": {},
+          "reference": {
+            "tsr_id": "request#222222",
+            "ref_field": "hostname"
+          },
+          "owner": "SC3",
+          "modifier": "system",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "location",
+          "is_reference": true,
+          "value": {},
+          "reference": {
+            "tsr_id": "request#222222",
+            "ref_field": "location"
+          },
+          "owner": "SC3",
+          "modifier": "system",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "fqdn_production",
+          "group_name": "network_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "fqdn_atl",
+          "group_name": "network_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "dns_reversed_lookup",
+          "group_name": "network_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "firewall_protected",
+          "group_name": "network_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "platform",
+          "group_name": "os_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "os",
+          "group_name": "os_configuration",
+          "is_reference": true,
+          "value": {},
+          "reference": {
+            "tsr_id": "request#324325",
+            "ref_field": "os"
+          },
+          "owner": "T3 Support",
+          "modifier": "T3 Support",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "host_type",
+          "group_name": "os_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "cpu",
+          "group_name": "os_configuration",
+          "is_reference": true,
+          "value": {},
+          "reference": {
+            "tsr_id": "request#324325",
+            "ref_field": "cpu"
+          },
+          "owner": "T3 Support",
+          "modifier": "T3 Support",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "main_project_owner",
+          "group_name": "os_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "clustering",
+          "group_name": "os_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "cluster_hostname",
+          "group_name": "os_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "remote_standby",
+          "group_name": "os_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "database_type",
+          "group_name": "database_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "database_version",
+          "group_name": "database_configuration",
+          "is_reference": true,
+          "value": {},
+          "reference": {
+            "tsr_id": "request#222222",
+            "ref_field": "database_version"
+          },
+          "owner": "SC3",
+          "modifier": "system",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "data_replication",
+          "group_name": "database_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "instance_name",
+          "group_name": "database_configuration",
+          "is_reference": true,
+          "value": {},
+          "reference": {
+            "tsr_id": "request#222222",
+            "ref_field": "instance_name"
+          },
+          "owner": "SC3",
+          "modifier": "system",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "vm_name",
+          "group_name": "database_configuration",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": true
+        },
+        {
+          "name": "other_info",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "Requester",
+          "modifier": "Requester",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "support_manager_approval",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "T4 Manager",
+          "modifier": "T4 Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "sm_comment",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "T4 Manager",
+          "modifier": "T4 Manager",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "support_handling",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "T4 Support",
+          "modifier": "T4 Support",
+          "subscribers": [],
+          "is_fulfilled": false
+        },
+        {
+          "name": "support_comment",
+          "is_reference": false,
+          "value": {},
+          "reference": "",
+          "owner": "T4 Support",
+          "modifier": "T4 Support",
+          "subscribers": [],
+          "is_fulfilled": false
+        }
+      ],
+      "stages": [
+        {
+          "id": 0,
+          "name": "new",
+          "fulfill_criteria": {
+            "111111": {
+              "fulfilled": false
+            },
+            "222222": {
+              "fulfilled": false
+            }
+          },
+          "is_fulfilled": false,
+          "updated_by": "system",
+          "updated_datetime": "2018/07/13 11:30"
+        },
+        {
+          "id": 1,
+          "name": "submitted",
+          "fulfill_criteria": [
+            "platform",
+            "os",
+            "host_type",
+            "cpu",
+            "main_project_owner",
+            "clustering",
+            "cluster_hostname",
+            "remote_standby",
+            "database_type",
+            "database_version",
+            "data_replication",
+            "instance_name",
+            "vm_name"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "system",
+          "updated_datetime": "2018/07/13 12:30"
+        },
+        {
+          "id": 2,
+          "name": "support_manager_approved",
+          "fulfill_criteria": [
+            "support_manager_approval"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "T4 Manager",
+          "updated_datetime": ""
+        },
+        {
+          "id": 3,
+          "name": "completed",
+          "fulfill_criteria": [
+            "support_handling"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "T4 Support Group",
+          "updated_datetime": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "express-mongo-rest",
+  "version": "0.1.2",
+  "description": "An mongo-backed RESTful express route.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/pbatey/express-mongo-rest"
+  },
+  "author": "Phil Batey <pbatey@gmail.com>",
+  "license": "MIT License",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "compression": "^1.7.3",
+    "dotenv": "2.0.0",
+    "istanbul": "^0.4.5",
+    "jQuery": "^1.7.4",
+    "method-override": "^2.3.7",
+    "mocha": "^3.2.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.3",
+    "nyc": "^12.0.2",
+    "pem": "^1.14.2",
+    "supertest": "^2.0.1"
+  },
+  "scripts": {
+    "start": "set NODE_ENV=production&&node server.js",
+    "start-dev": "node --inspect=127.0.0.1:9229 server.js",
+    "start-dev-chris": "node server.js  --public t1-chrischin:8180 --host 0.0.0.0 --port 8180",
+    "test": "mocha test",
+    "test-request": "mocha test/request.js",
+    "test-envelope": "mocha test/envelope.js",
+    "test-coverage": "nyc mocha ./test/request.js",
+    "nodemon": "set NODE_ENV=development&&nodemon server.js --ignore ./test"
+  },
+  "dependencies": {
+    "activedirectory2": "^1.2.7",
+    "async": "^2.6.1",
+    "axios": "^0.18.0",
+    "body-parser": "^1.15.0",
+    "compress": "^0.99.0",
+    "dotenv-flow": "^0.4.0",
+    "express": "^4.14.0",
+    "inflection": "^1.10.0",
+    "jsonpatch-to-mongodb": "^0.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongodb": "^2.2.21",
+    "mongoose": "^5.3.14",
+    "mongoose-sequence": "^5.0.1",
+    "mongoskin": "^2.1.0",
+    "multer": "^1.4.1",
+    "query-to-mongo": "^0.6.0",
+    "request": "^2.88.0"
+  }
+}

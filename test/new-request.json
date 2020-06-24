@@ -1,0 +1,658 @@
+{
+  "bundle_type": "Launch Web Application (Windows)",
+  "services": [
+    {
+      "source_ref": "001",
+      "service_name": "New Windows Server",
+      "service_type": "nwinserver",
+      "values": {
+        "location": "DC1",
+        "OS": "win 2016",
+        "CPU": "i7",
+        "memory": 8,
+        "disk": 1000,
+        "software": [
+          {
+            "row_id": 1,
+            "value": "scom"
+          },
+          {
+            "row_id": 2,
+            "value": "scom"
+          }
+        ],
+        "backup": 1000,
+        "hostname": [
+          {
+            "row_id": 1,
+            "value": "wcdcwin10r"
+          },
+          {
+            "row_id": 2,
+            "value": "wcdcwin10s"
+          }
+        ],
+        "ip": [],
+        "port": [],
+        "requester_manager_approval": {
+          "status": true,
+          "timestamp": "",
+          "approved_by": ""
+        },
+        "support_manager_approval": {
+          "status": false,
+          "timestamp": "",
+          "approved_by": ""
+        },
+        "support_handling": {
+          "status": false,
+          "timestamp": "",
+          "approved_by": ""
+        }
+      },
+      "stages": [
+        {
+          "stage_id": 1,
+          "name": "Requester Manager Approval",
+          "criteria_queue": [],
+          "subscribers": [],
+          "ext_subscribers": [],
+          "field": "requester_manager_approval",
+          "by_ref": false,
+          "user_group": [
+            "to be filled by Runtime - Requester Manager Group"
+          ],
+          "is_fulfilled": true,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "human",
+          "workflow_ref": "hw_bundle1_011"
+        },
+        {
+          "stage_id": 2,
+          "name": "Support Team Manager Approval",
+          "criteria_queue": [],
+          "subscribers": [
+            {
+              "sr_id": "local",
+              "stage_id": 3
+            }
+          ],
+          "ext_subscribers": [],
+          "field": "support_manager_approval",
+          "by_ref": false,
+          "user_group": [
+            "t3sm"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "human",
+          "workflow_ref": "hw_bundle1_012"
+        },
+        {
+          "stage_id": 3,
+          "name": "Support Team Handling",
+          "criteria_queue": [
+            {
+              "sr_id": "local",
+              "stage_id": 2
+            }
+          ],
+          "subscribers": [],
+          "ext_subscribers": [],
+          "field": "support_handling",
+          "by_ref": false,
+          "user_group": [
+            "t3support"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "human",
+          "workflow_ref": "hw_bundle1_013"
+        }
+      ],
+      "pending_queue": [
+        {
+          "stage_id": 2
+        },
+        {
+          "stage_id": 3
+        }
+      ]
+    },
+    {
+      "source_ref": "002",
+      "service_name": "MS SQL Server",
+      "service_type": "mssqlserver",
+      "values": {
+        "location": [
+          {
+            "row_id": 1,
+            "value": "DC1"
+          },
+          {
+            "row_id": 2,
+            "value": "DC1"
+          }
+        ],
+        "type": [
+          {
+            "row_id": 1,
+            "value": "Windows"
+          },
+          {
+            "row_id": 2,
+            "value": "Windows"
+          }
+        ],
+        "os": [
+          {
+            "row_id": 1,
+            "value": "Win2016"
+          },
+          {
+            "row_id": 2,
+            "value": "Win2016"
+          }
+        ],
+        "db_type": [
+          {
+            "row_id": 1,
+            "value": "MS SQL"
+          },
+          {
+            "row_id": 2,
+            "value": "MS SQL"
+          }
+        ],
+        "software": [
+          {
+            "row_id": 1,
+            "value": "scom"
+          },
+          {
+            "row_id": 2,
+            "value": "scom"
+          }
+        ],
+        "backup": [
+          {
+            "row_id": 1,
+            "value": "1000"
+          },
+          {
+            "row_id": 2,
+            "value": "1000"
+          }
+        ],
+        "hostname": [
+          {
+            "row_id": 1,
+            "value": "wcdcwin10r"
+          },
+          {
+            "row_id": 2,
+            "value": "wcdcwin10s"
+          }
+        ],
+        "instance": [
+          {
+            "row_id": 1,
+            "value": "instance_1"
+          },
+          {
+            "row_id": 2,
+            "value": "instance_2"
+          }
+        ],
+        "sql_ip": [
+          {
+            "row_id": 1,
+            "value": "1.2.3.4"
+          },
+          {
+            "row_id": 2,
+            "value": "2.3.4.5"
+          }
+        ],
+        "sql_port": [
+          {
+            "row_id": 1,
+            "value": "3000"
+          },
+          {
+            "row_id": 2,
+            "value": "3000"
+          }
+        ],
+        "requester_manager_approval": {
+          "status": false,
+          "timestamp": "",
+          "approved_by": ""
+        },
+        "support_manager_approval": {
+          "status": false,
+          "timestamp": "",
+          "approved_by": ""
+        },
+        "support_handling": {
+          "status": false,
+          "timestamp": "",
+          "approved_by": ""
+        }
+      },
+      "values-ref": {
+        "sql_ip": {
+          "service_ref": "to be filled by T3's ServiceRequestID",
+          "field_ref": "ip"
+        },
+        "sql_port": {
+          "service_ref": "to be filled by T3's ServiceRequestID",
+          "field_ref": "port"
+        }
+      },
+      "stages": [
+        {
+          "stage_id": 1,
+          "name": "Requester Manager Approval",
+          "criteria_queue": [],
+          "subscribers": [
+            {
+              "sr_id": "local",
+              "stage_id": 2
+            },
+            {
+              "sr_id": "local",
+              "stage_id": 4
+            }
+          ],
+          "ext_subscribers": [],
+          "field": "requester_manager_approval",
+          "by_ref": false,
+          "user_group": [
+            "t1sm"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "human",
+          "workflow_ref": "hw_bundle1_021"
+        },
+        {
+          "stage_id": 2,
+          "name": "Support Team Manager Approval",
+          "criteria_queue": [
+            {
+              "sr_id": "local",
+              "stage_id": 1
+            }
+          ],
+          "subscribers": [
+            {
+              "sr_id": "local",
+              "stage_id": 3
+            }
+          ],
+          "ext_subscribers": [],
+          "field": "support_manager_approval",
+          "by_ref": false,
+          "user_group": [
+            "sc3sm",
+            "t1sm"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "human",
+          "workflow_ref": "hw_bundle1_022"
+        },
+        {
+          "stage_id": 3,
+          "name": "Support Team Handling",
+          "criteria_queue": [
+            {
+              "sr_id": "local",
+              "stage_id": 2
+            },
+            {
+              "sr_id": "local",
+              "stage_id": 4
+            },
+            {
+              "sr_id": "local",
+              "stage_id": 5
+            }
+          ],
+          "subscribers": [],
+          "ext_subscribers": [],
+          "field": "support_handling",
+          "by_ref": false,
+          "user_group": [
+            "sc3support"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "human",
+          "workflow_ref": "hw_bundle1_023"
+        },
+        {
+          "stage_id": 4,
+          "name": "Required Information",
+          "criteria_queue": [
+            {
+              "sr_id": "local",
+              "stage_id": 1
+            }
+          ],
+          "subscribers": [
+            {
+              "sr_id": "local",
+              "stage_id": 3
+            }
+          ],
+          "ext_subscribers": [],
+          "field": "sql_ip",
+          "by_ref": true,
+          "user_group": [
+            "sc3support"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "machine",
+          "workflow_ref": "mw_bundle1_024"
+        },
+        {
+          "stage_id": 5,
+          "name": "Required Information2",
+          "criteria_queue": [],
+          "subscribers": [
+            {
+              "sr_id": "local",
+              "stage_id": 3
+            }
+          ],
+          "ext_subscribers": [],
+          "field": "sql_port",
+          "by_ref": true,
+          "user_group": [
+            "sc3support"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "machine",
+          "workflow_ref": "mw_bundle1_025"
+        }
+      ],
+      "pending_queue": [
+        {
+          "stage_id": 1
+        },
+        {
+          "stage_id": 2
+        },
+        {
+          "stage_id": 3
+        },
+        {
+          "stage_id": 4
+        },
+        {
+          "stage_id": 5
+        }
+      ]
+    },
+    {
+      "source_ref": "003",
+      "service_name": "Data Backup Service",
+      "service_type": "backupservice",
+      "values": {
+        "location": "DC1",
+        "type": "",
+        "environment": "Production",
+        "OS": "win 2016",
+        "CPU": "i7",
+        "memory": 8,
+        "disk": 1000,
+        "software": [
+          "scom"
+        ],
+        "justification": "new project",
+        "backup": 1000,
+        "hostname": [
+          "wcdcwin10s"
+        ],
+        "instance": [
+          "abc"
+        ],
+        "ip": [],
+        "requester_manager_approval": false,
+        "requester_manager_approval_contents": {
+          "timestamp": "",
+          "approved_by": ""
+        },
+        "support_handling": false,
+        "support_handling_contents": {
+          "timestamp": "",
+          "approved_by": ""
+        }
+      },
+      "stages": [
+        {
+          "stage_id": 1,
+          "name": "Requester Manager Approval",
+          "criteria_queue": [],
+          "subscribers": [
+            {
+              "sr_id": "local",
+              "stage_id": 2
+            }
+          ],
+          "ext_subscribers": [],
+          "field": "requester_manager_approval",
+          "by_ref": false,
+          "user_group": [
+            "t1sm"
+          ],
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "human",
+          "workflow_ref": "hw_bundle1_031"
+        },
+        {
+          "stage_id": 2,
+          "name": "Support Team Handling",
+          "criteria_queue": [
+            {
+              "sr_id": "local",
+              "stage_id": 1
+            }
+          ],
+          "subscribers": [],
+          "ext_subscribers": [],
+          "field": "support_handling",
+          "by_ref": false,
+          "is_fulfilled": false,
+          "updated_by": "",
+          "updated_datetime": "",
+          "workflow_type": "human",
+          "workflow_ref": "hw_bundle1_032"
+        }
+      ],
+      "pending_queue": [
+        {
+          "stage_id": 1
+        },
+        {
+          "stage_id": 2
+        }
+      ]
+    }
+  ],
+  "requester": {
+    "source_ref": "000",
+    "logonid": "abcdef",
+    "name": "Test Requester 1",
+    "team": "T1",
+    "title": "Tester(T1)1",
+    "email": "t1tester@ha.org.hk",
+    "values": {
+      "application": "My Project Name",
+      "justification": "This Project needs 1 web server to connect 2 SQL servers ....",
+      "environment": "Development"
+    }
+  },
+  "shared_fields": [
+    {
+      "source_ref": "000",
+      "field_name": "application",
+      "display_name": "Application",
+      "watchers": [
+        "000",
+        "001",
+        "002",
+        "003"
+      ],
+      "housekeepers": [
+        "requester"
+      ]
+    },
+    {
+      "source_ref": "000",
+      "field_name": "justification",
+      "display_name": "Justification",
+      "watcher_tabs": [
+        "000",
+        "001",
+        "002",
+        "003"
+      ],
+      "housekeepers": [
+        "requester"
+      ]
+    },
+    {
+      "source_ref": "000",
+      "field_name": "environment",
+      "display_name": "environment",
+      "watchers": [
+        "000",
+        "001",
+        "002",
+        "003"
+      ],
+      "housekeepers": [
+        "requester"
+      ]
+    },
+    {
+      "source_ref": "001",
+      "field_name": "iis_os",
+      "display_name": "IIS OS",
+      "watcher_tabs": [
+        "000",
+        "001"
+      ],
+      "housekeepers": [
+        "requester",
+        "t3support"
+      ]
+    },
+    {
+      "source_ref": "001",
+      "field_name": "iis_cpu",
+      "display_name": "IIS CPU",
+      "watcher_tabs": [
+        "000",
+        "001"
+      ],
+      "housekeepers": [
+        "requester",
+        "t3support"
+      ]
+    },
+    {
+      "source_ref": "001",
+      "field_name": "iis_memory",
+      "display_name": "IIS Memory",
+      "watcher_tabs": [
+        "000",
+        "001"
+      ],
+      "housekeepers": [
+        "requester",
+        "t3support"
+      ]
+    },
+    {
+      "source_ref": "001",
+      "field_name": "iis_disk",
+      "display_name": "IIS Disk",
+      "watcher_tabs": [
+        "000",
+        "001"
+      ],
+      "housekeepers": [
+        "requester",
+        "t3support"
+      ]
+    },
+    {
+      "source_ref": "001",
+      "field_name": "iis_software",
+      "display_name": "IIS Server Software",
+      "watcher_tabs": [
+        "000",
+        "001"
+      ],
+      "housekeepers": [
+        "requester",
+        "001"
+      ]
+    },
+    {
+      "source_ref": "001",
+      "field_name": "iis_hostname",
+      "display_name": "IIS Hostname",
+      "watchers": [
+        "000",
+        "001"
+      ],
+      "housekeepers": [
+        "requester",
+        "t3support"
+      ]
+    },
+    {
+      "source_ref": "002",
+      "field_name": "sql_ip",
+      "display_name": "SQL IP",
+      "watcher_tabs": [
+        "000",
+        "001",
+        "002"
+      ],
+      "housekeepers": [
+        "sc3support"
+      ]
+    },
+    {
+      "source_ref": "002",
+      "field_name": "sql_port",
+      "display_name": "SQL Port",
+      "watcher_tabs": [
+        "000",
+        "001",
+        "002"
+      ],
+      "housekeepers": [
+        "sc3support"
+      ]
+    }
+  ]
+}
