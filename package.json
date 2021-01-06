@@ -36,7 +36,7 @@
   "dependencies": {
     "activedirectory2": "^1.2.7",
     "async": "^2.6.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.15.0",
     "compress": "^0.99.0",
     "dotenv-flow": "^0.4.0",
