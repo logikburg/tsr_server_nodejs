@@ -43,7 +43,7 @@
     "express": "^4.14.0",
     "inflection": "^1.10.0",
     "jsonpatch-to-mongodb": "^0.3.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "moment": "^2.24.0",
     "mongodb": "^2.2.21",
     "mongoose": "^5.3.14",
